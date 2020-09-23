@@ -1,1 +1,1 @@
-Solves of Competitive Programming problems
+Solves of Competitive Programming Problems
