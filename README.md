@@ -1,1 +1,1 @@
-Solves of Competitive Programming Problems
+Solutions of Competitive Programming Problems
