@@ -193,3 +193,62 @@ int main(){
     }
     return 0;
 }
+---------------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main(){
+    int x[5], y[5], soma[5], produto[5], diff[5], inter[5], uni[10], contdiff=0, continter=0;
+    printf("Insira o vetor x: ");
+    for(int i=0; i<5; i++){
+        scanf("%d", &x[i]);
+    }
+    printf("\nInsira o vetor y: ");
+    for(int i=0; i<5; i++){
+        scanf("%d", &y[i]);
+    }
+    for(int i=0; i<5; i++){
+        soma[i]=x[i]+y[i];
+    }
+    for(int i=0; i<5; i++){
+        produto[i]=x[i]*y[i];
+    }
+    for(int i=0; i<5; i++){
+        int igual=0;
+        for(int j=0; j<5; j++){
+            if(x[i]==y[j]) igual=1;
+        }
+        if(!igual){
+            diff[contdiff++]=x[i];
+        }else{
+            inter[continter++]=x[i];
+        }
+    }
+    for(int i=0; i<5; i++){
+        uni[i]=y[i];
+    }
+    for(int i=0; i<contdiff; i++){
+        uni[i+contdiff]=diff[i];
+    }
+    printf("\nO vetor de soma é igual a: ");
+    for(int i=0; i<5; i++){
+        printf("%d ", soma[i]);
+    }
+    printf("\nO vetor do produto é igual a: ");
+    for(int i=0; i<5; i++){
+        printf("%d ", produto[i]);
+    }
+    printf("\nO vetor da diferença é igual a: ");
+    for(int i=0; i<contdiff; i++){
+        printf("%d ", diff[i]);
+    }
+    printf("\nO vetor de interseção é igual a: ");
+    for(int i=0; i<continter; i++){
+        printf("%d ", inter[i]);
+    }
+    printf("\nO vetor de união é igual a: ");
+    for(int i=0; i<5+contdiff; i++){
+        printf("%d ", uni[i]);
+    }
+    printf("\n");
+    return 0;
+}
