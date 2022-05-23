@@ -133,3 +133,27 @@ int main(){
     }
     return 0;
 }
+--------------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+ 
+int main(){
+    int maior=0, menor=0, par=0, impar=0;
+    printf("Insira os 10 números inteiros: ");
+    for(int i=0; i<10; i++){
+        int num;
+        scanf("%d", &num);
+        if(!i){
+            maior=menor=num;
+        }else{
+            maior=(num>maior)?num:maior;
+            menor=(num<menor)?num:menor;
+        }
+        if(num&1){
+            impar++;
+        }else{
+            par++;
+        }
+    }
+    printf("O maior valor da lista é %d\nO menor valor da lista é %d\nA quantidade de valores pares é %d\nA quantidade de valores ímpares é %d\n", maior, menor, par, impar);
+    return 0;
+}
