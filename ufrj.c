@@ -107,3 +107,29 @@ int main(){
     }
     return 0;
 }
+--------------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+ 
+int main(){
+    int matriz1[2][3], matriz2[2][3];
+    printf("Insira a primeira matriz:\n");
+    for(int i=0; i<2; i++){
+        for(int j=0; j<3; j++){
+            scanf("%d", &matriz1[i][j]);
+        }
+    }
+    printf("\nInsira a segunda matriz:\n");
+    for(int i=0; i<2; i++){
+        for(int j=0; j<3; j++){
+            scanf("%d", &matriz2[i][j]);
+        }
+    }
+    printf("\nA soma das matrizes é \n");
+    for(int i=0; i<2; i++){
+        for(int j=0; j<3; j++){
+            printf("%d ", matriz1[i][j]+matriz2[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
