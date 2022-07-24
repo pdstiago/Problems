@@ -1,1 +1,1 @@
-This repository contains solutions of competitive programming problems
+# Competitive Programming Solves
